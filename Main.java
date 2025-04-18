@@ -8,16 +8,12 @@ public class Main {
         String[] dicionario = new String[1000];
         File arquivo = new File("teste.txt");
         Scanner leitorArquivo = new Scanner(arquivo);
-        String palavra = "";
-        int count = 0;
         int i = 0;
         String linha = "";
         boolean palavraExistente = false;
 
         while (leitorArquivo.hasNext()) {
             linha = leitorArquivo.next().toLowerCase();
-
-            count++;
 
             palavraExistente = false;
             for (int j = 0; j < i; j++) {
@@ -46,7 +42,7 @@ public class Main {
         for (int j = 0; j < i; j++) {
             System.out.println(dicionario[j]);
         }
-        System.out.println("Total de palavras diferentes no dicionarios = " + i);
+        System.out.println("Total de palavras diferentes no dicionario = " + i);
         leitorArquivo.close();
     }
 }
